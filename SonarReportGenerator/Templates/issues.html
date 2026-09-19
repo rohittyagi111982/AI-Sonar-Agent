@@ -1,0 +1,109 @@
+<section id="issues-section">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h3 class="section-title mb-1">Issues</h3>
+            <p class="text-muted mb-0">
+                Top files and issues identified by SonarQube
+            </p>
+        </div>
+        <span class="badge bg-secondary">
+            {{TotalIssues}} Issues
+        </span>
+    </div>
+
+    <!-- Issue KPI Cards -->
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-6 col-xl-3">
+            <div class="metric-card">
+                <div class="title">Total Issues</div>
+                <div class="value">{{TotalIssues}}</div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="metric-card">
+                <div class="title">Bugs</div>
+                <div class="value text-danger">{{Bugs}}</div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="metric-card">
+                <div class="title">Vulnerabilities</div>
+                <div class="value text-warning">{{Vulnerabilities}}</div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="metric-card">
+                <div class="title">Code Smells</div>
+                <div class="value">{{CodeSmells}}</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Top Files -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Top Files</span>
+            <small class="text-muted">Highest number of issues</small>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>File</th>
+                            <th>Language</th>
+                            <th>Total Issues</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{TopFiles}}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Issues -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Top Issues</span>
+            <small class="text-muted">Highest severity first</small>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Severity</th>
+                            <th>Type</th>
+                            <th>File</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{TopIssues}}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</section>

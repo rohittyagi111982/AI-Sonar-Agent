@@ -1,0 +1,196 @@
+<section id="summary-section">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h3 class="section-title mb-1">Executive Summary</h3>
+            <p class="text-muted mb-0">
+                Overall SonarQube quality assessment for {{ProjectName}}
+            </p>
+        </div>
+
+        <span class="badge badge-quality
+            {{QualityGateClass}}">
+            {{QualityGate}}
+        </span>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-6 col-xl-3">
+            <div class="metric-card">
+                <div class="title">Quality Gate</div>
+                <div class="value">
+                    {{QualityGate}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="metric-card">
+                <div class="title">Coverage</div>
+                <div class="value">
+                    {{Coverage}}%
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="metric-card">
+                <div class="title">Duplication</div>
+                <div class="value">
+                    {{Duplication}}%
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="metric-card">
+                <div class="title">Critical Issues</div>
+                <div class="value text-danger">
+                    {{Critical}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Quality Status -->
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    Reliability
+                </div>
+                <div class="card-body">
+                    <span class="badge bg-secondary">
+                        {{Reliability}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    Security
+                </div>
+                <div class="card-body">
+                    <span class="badge bg-secondary">
+                        {{Security}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    Maintainability
+                </div>
+                <div class="card-body">
+                    <span class="badge bg-secondary">
+                        {{Maintainability}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- AI / Executive Summary -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Executive Summary
+        </div>
+        <div class="card-body">
+            <p class="mb-0">
+                {{ExecutiveSummary}}
+            </p>
+        </div>
+    </div>
+
+    <!-- Quality Overview -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Quality Overview
+        </div>
+        <div class="card-body">
+            <p class="mb-0">
+                {{QualityOverview}}
+            </p>
+        </div>
+    </div>
+
+    <!-- Severity Breakdown -->
+    <div class="card">
+        <div class="card-header">
+            Severity Breakdown
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Severity</th>
+                            <th>Issues</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="badge bg-dark">
+                                    Blocker
+                                </span>
+                            </td>
+                            <td>{{Blocker}}</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span class="badge bg-danger">
+                                    Critical
+                                </span>
+                            </td>
+                            <td>{{Critical}}</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Major
+                                </span>
+                            </td>
+                            <td>{{Major}}</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span class="badge bg-info text-dark">
+                                    Minor
+                                </span>
+                            </td>
+                            <td>{{Minor}}</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span class="badge bg-secondary">
+                                    Info
+                                </span>
+                            </td>
+                            <td>{{Info}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</section>

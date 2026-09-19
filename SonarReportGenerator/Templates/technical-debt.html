@@ -1,0 +1,62 @@
+<section id="debt-section">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h3 class="section-title mb-1">Technical Debt</h3>
+            <p class="text-muted mb-0">
+                Technical debt identified during SonarQube analysis
+            </p>
+        </div>
+
+        <span class="badge bg-warning text-dark">
+            {{DebtFileCount}} Files
+        </span>
+    </div>
+
+    <!-- Technical Debt Summary -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Technical Debt Summary
+        </div>
+
+        <div class="card-body">
+            <div class="report-markdown">
+                {{TechnicalDebtSummary}}
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Debt Files -->
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Top Debt Files</span>
+            <small class="text-muted">
+                Files requiring the most attention
+            </small>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>File</th>
+                            <th>Language</th>
+                            <th>Total Issues</th>
+                            <th>Summary</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{DebtFiles}}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,150 @@
+
+:root{
+    --primary:#0d6efd;
+    --success:#198754;
+    --warning:#ffc107;
+    --danger:#dc3545;
+    --light:#f8f9fa;
+    --border:#dee2e6;
+    --sidebar:#1f2937;
+    --text:#212529;
+}
+
+body{
+    background:#f5f7fb;
+    color:var(--text);
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.sidebar{
+    width:260px;
+    min-width:260px;
+}
+
+.sidebar h4{
+    color:#fff;
+}
+
+.sidebar .nav-link{
+    color:#d1d5db;
+    margin-bottom:6px;
+    border-radius:8px;
+    text-align:left;
+}
+
+.sidebar .nav-link:hover{
+    background:#374151;
+    color:#fff;
+}
+
+.sidebar .nav-link.active{
+    background:var(--primary);
+    color:#fff;
+}
+
+main{
+    overflow:auto;
+}
+
+.card{
+    border:none;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    margin-bottom:20px;
+}
+
+.card-header{
+    background:#fff;
+    font-weight:600;
+    border-bottom:1px solid var(--border);
+}
+
+.metric-card{
+    padding:20px;
+    border-radius:12px;
+    background:#fff;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.metric-card .value{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.metric-card .title{
+    color:#6c757d;
+}
+
+.table{
+    background:#fff;
+}
+
+.table thead{
+    background:#eef3ff;
+}
+
+.table th{
+    font-weight:600;
+}
+
+.badge-quality{
+    font-size:.9rem;
+    padding:.6rem 1rem;
+}
+
+.section-title{
+    margin:25px 0 15px;
+    font-weight:600;
+}
+
+pre,code{
+    white-space:pre-wrap;
+}
+
+.alert{
+    border-radius:10px;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    color:#6c757d;
+}
+
+@media (max-width:992px){
+    .sidebar{
+        width:100%;
+        min-width:100%;
+        height:auto !important;
+    }
+
+    .d-flex{
+        flex-direction:column;
+    }
+}
+
+@media print{
+
+    .sidebar{
+        display:none;
+    }
+
+    body{
+        background:#fff;
+    }
+
+    main{
+        width:100%;
+    }
+
+    .card{
+        box-shadow:none;
+        border:1px solid #ccc;
+    }
+
+    .nav,
+    button{
+        display:none !important;
+    }
+}
